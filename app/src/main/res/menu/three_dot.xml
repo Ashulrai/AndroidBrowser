@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="History"
+        android:id="@+id/History"
+        app:showAsAction="never"/>
+    <item
+        android:title="Show Bookmarks"
+        android:id="@+id/bookmarks"
+        app:showAsAction="never"/>
+    <item
+        android:title="Desktop Mode"
+        android:id="@+id/desktop"
+        app:showAsAction="never"/>
+    <item
+        android:title="Download"
+        android:id="@+id/Download"
+        app:showAsAction="never"/>
+    <item
+        android:title="Scan Qr Code"
+        android:id="@+id/ScanQrCode"
+        app:showAsAction="never"/>
+    <item
+        android:title="Setting"
+        android:id="@+id/Setting"
+        app:showAsAction="never"/>
+    <item
+        android:title="About Developer"
+        android:id="@+id/AboutDeveloper"
+        app:showAsAction="never"/>
+</menu>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/Back"
+        android:icon="@drawable/back"
+        android:title="@null" />
+
+    <item
+        android:id="@+id/Forward"
+        android:icon="@drawable/forward"
+        android:title="@null" />
+
+    <item
+        android:id="@+id/Home"
+        android:icon="@drawable/home"
+        android:title="@null" />
+
+    <item
+        android:id="@+id/New_Tabs"
+        android:icon="@drawable/tab"
+        android:title="@null" />
+
+    <item
+        android:id="@+id/Me"
+        android:icon="@drawable/baseline_settings_24"
+        android:title="@null" />
+
+</menu>

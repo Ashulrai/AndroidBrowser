@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/navigation"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/colorPrimaryDark"
+        app:itemTextColor="@color/colorPrimaryDark"
+        android:background="?android:attr/windowBackground"
+        app:itemIconTint="@drawable/hover_selector_two"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <LinearLayout
+       android:id="@+id/linearLayout"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent">
+
+       <androidx.coordinatorlayout.widget.CoordinatorLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+           <com.google.android.material.appbar.AppBarLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+               <include
+                   android:id="@+id/toolbar"
+                   layout="@layout/toolbar"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent">
+               </include>
+
+               <ProgressBar
+                   android:id="@+id/ProgressBar"
+                   style="?android:attr/progressBarStyleHorizontal"
+                   android:layout_width="match_parent"
+                   android:layout_height="2dp"
+                   android:progressDrawable="@drawable/custom_progressbar"
+                   android:drawable="@drawable/custom_progressbar"
+                   android:elevation="7dp"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+                   tools:targetApi="lollipop">
+               </ProgressBar>
+
+           </com.google.android.material.appbar.AppBarLayout>
+
+           <androidx.core.widget.NestedScrollView
+               android:id="@+id/nestedScrollView"
+               android:layout_width="411dp"
+               android:layout_height="430dp"
+               android:layout_gravity="fill_vertical"
+               app:layout_anchor="@+id/nestedScrollView"
+               app:layout_anchorGravity="center"
+               app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+               <WebView
+                   android:id="@+id/Web_Views"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent">
+
+               </WebView>
+
+           </androidx.core.widget.NestedScrollView>
+
+       </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+   </LinearLayout>
+
+</RelativeLayout>

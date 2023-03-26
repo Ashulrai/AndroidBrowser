@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">I Browse</string>
+    <string name="title_home">Home</string>
+    <string name="title_NewTabs">New Tabs</string>
+    <string name="title_Me">Me</string>
+    <string name="title_Forward">Forward</string>
+    <string name="title_Back">Back</string>
+    <string name="title_tabs">Tab</string>
+    <string name="Null">null</string>
+    <string name="Mic">Mic</string>
+    <string name="Search_or_enter_url">Search Or Enter URL</string>
+    <string name="Search_button">Search_Button</string>
+</resources>

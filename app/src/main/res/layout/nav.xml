@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/cream" android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:id="@+id/dimTabListBackground"
+        android:background="#5c000000" android:visibility="gone"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/margin_42">
+        <LinearLayout
+            android:layout_gravity="bottom" android:orientation="vertical"
+            android:id="@+id/addtabLLayout" android:background="@color/colorPrimary"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="100dp">
+            <View
+                android:background="@color/gray"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/tabLists" android:background="@color/colorPrimaryDark"
+                android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <View
+            android:background="@color/gray"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_50">
+            <ImageView
+                android:layout_gravity="left"
+                android:id="@+id/deleteAllTabImg"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="@dimen/margin_10"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_delete" android:layout_weight="1"
+                android:layout_alignParentLeft="true"/>
+            <ImageView
+                android:id="@+id/addTab" android:background="?attr/selectableItemBackgroundBorderless"
+                android:paddingLeft="@dimen/margin_40" android:paddingRight="@dimen/margin_40"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:src="@drawable/addtab" android:layout_weight="1"
+                android:layout_centerInParent="true"/>
+            <ImageView
+                android:layout_gravity="right"
+                android:id="@+id/incogonito_tablist"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="@dimen/margin_10" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:src="@drawable/spyoff"
+                android:layout_weight="1" android:layout_alignParentLeft="true"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:orientation="vertical" android:id="@+id/premieum_feature_layout"
+        android:background="@color/blacks" android:visibility="gone"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_40">
+        <View
+            android:background="@color/gray_txt_color"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+        <TextView
+            android:textSize="@dimen/text_size_15" android:textColor="@color/white"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_10" android:text="@string/string_premieum_feature"/>
+        <LinearLayout
+            android:gravity="center" android:orientation="horizontal"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8" android:layout_marginBottom="@dimen/margin_15">
+            <ImageView
+                android:gravity="center" android:id="@+id/whatsappGroups"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:src="@drawable/whatsapp"/>
+            <ImageView
+                android:gravity="center" android:id="@+id/facebookGroups"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_60" android:src="@drawable/facebook"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:id="@+id/lowerLayout" android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:background="@color/gray"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+        <LinearLayout
+            android:orientation="horizontal" android:id="@+id/bottom_bar"
+            android:background="@color/abc_decor_view_status_guard_light"
+            android:layout_width="match_parent" android:layout_height="42dp"
+            android:baselineAligned="false">
+            <LinearLayout
+                android:orientation="horizontal" android:layout_width="match_parent"
+                android:layout_height="match_parent" android:layout_weight="1">
+                <ImageView
+                    android:id="@+id/goBackOff" android:background="?attr/selectableItemBackgroundBorderless"
+                    android:layout_width="wrap_content" android:layout_height="match_parent"
+                    android:src="@drawable/backoff" android:layout_weight="1" android:layout_alignParentBottom="true"/>
+                <ImageView
+                    android:id="@+id/goBackOn" android:background="?attr/selectableItemBackgroundBorderless"
+                    android:visibility="gone" android:layout_width="wrap_content" android:layout_height="match_parent"
+                    android:src="@drawable/backon" android:layout_weight="1" android:layout_alignParentBottom="true"/>
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center" android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:layout_weight="1">
+                <ImageView
+                    android:id="@+id/goForwardOff"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:layout_width="wrap_content" android:layout_height="match_parent"
+                    android:src="@drawable/forward_whatsapp" android:layout_weight="1"
+                    android:layout_alignParentBottom="true"/>
+                <ImageView
+                    android:id="@+id/goForwardOn" android:background="?attr/selectableItemBackgroundBorderless"
+                    android:visibility="gone" android:layout_width="wrap_content" android:layout_height="match_parent"
+                    android:src="@drawable/frowardon" android:layout_weight="1" android:layout_alignParentBottom="true"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal" android:layout_width="match_parent"
+                android:layout_height="match_parent" android:layout_weight="1">
+                <ImageView
+                    android:id="@+id/homeOff" android:background="?attr/selectableItemBackgroundBorderless"
+                    android:layout_width="wrap_content" android:layout_height="match_parent"
+                    android:src="@drawable/homeoff" android:layout_weight="1" android:layout_alignParentBottom="true"/>
+                <ImageView
+                    android:id="@+id/homeOn" android:background="?attr/selectableItemBackgroundBorderless"
+                    android:visibility="gone" android:layout_width="wrap_content" android:layout_height="match_parent"
+                    android:src="@drawable/homeon" android:layout_weight="1" android:layout_alignParentBottom="true"/>
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center" android:orientation="horizontal" android:id="@+id/btn_menu"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:layout_weight="1">
+                <ImageView
+                    android:textSize="@dimen/text_size_15" android:gravity="center"
+                    android:id="@+id/menuImg" android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:src="@drawable/tabon" android:layout_alignParentBottom="true"/>
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center" android:orientation="horizontal"
+                android:id="@+id/tabCountLayout" android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <TextView
+                    android:textSize="@dimen/text_size_15" android:textColor="@color/textColorPrimary"
+                    android:gravity="center" android:id="@+id/tabCountText"
+                    android:background="@drawable/border_tab" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
